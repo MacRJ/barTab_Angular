@@ -3,21 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>barTab</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
-
-    <script>
-      var app = angular.module("barTab", []);
-      app.directive(function() {
-        return {
-          templateUrl: 'tabSection.html'
-        }
-      })
-    </script>
-
-
+    <script src="controllers.js"></script>
   </head>
   <body>
     <div ng-view></div>
+    <div class="container">
+      <div ng-controller="header" class="header">{{hello.test}}</div>
+      <div ng-controller="tabSection" class="tabSection"></div>
+      <div ng-controller="billSection" class="billSection"></div>
+    </div>
   </body>
 </html>
