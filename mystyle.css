@@ -1,0 +1,11 @@
+.container {
+  grid-template-columns: 4fr;
+  grid-template-rows: auto;
+}
+.header {
+  grid-column: 1/4;
+  grid-row: 1;
+}
+.tabSection {
+  grid-column:
+}

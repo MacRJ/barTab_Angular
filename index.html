@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="barTab">
+  <head>
+    <meta charset="utf-8">
+    <title>barTab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
+
+    <script>
+      var app = angular.module("barTab", []);
+      app.directive(function() {
+        return {
+          templateUrl: 'tabSection.html'
+        }
+      })
+    </script>
+
+
+  </head>
+  <body>
+    <div ng-view></div>
+  </body>
+</html>
