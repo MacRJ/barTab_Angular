@@ -1,10 +1,18 @@
-var app = angular.module("barTab", [])
+var app = angular.module("barTab", [
+  'mainFactory'
+])
 
 app.controller("header", function($scope) {
   $scope.hello = {};
   $scope.hello.test = "hello World"
 });
 
-app.controller("tabSection", function($scope) {
-  $scope.tabs = ["test1", "test2", "test3", "test4"]
+app.controller("tabSection", function($scope, tabs) {
+  tabs.list(function(tabs) {
+    $scope.tabs = tabs;
+  })
+})
+
+app.controller("billSection", function($scope) {
+
 })

@@ -18,3 +18,18 @@
   grid-row: 2/8;
   background-color: green;
 }
+.menuSection {
+  grid-column: 1/3;
+  grid-row: 8/10;
+  background-color: orange;
+}
+.tabNotSelected {
+  grid-column: 3/4;
+  grid-row: 1;
+  background-color: yellow;
+}
+.tabSelected {
+  grid-column: 3/4;
+  grid-row: 1;
+  background-color: black;
+}
