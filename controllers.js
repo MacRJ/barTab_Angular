@@ -8,9 +8,10 @@ app.controller("header", function($scope) {
 });
 
 app.controller("tabSection", function($scope, tabs) {
-  tabs.list(function(tabs) {
+   tabs.list(function(tabs) {
     $scope.tabs = tabs;
   })
+
 })
 
 app.controller("billSection", function($scope) {

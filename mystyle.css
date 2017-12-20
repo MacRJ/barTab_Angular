@@ -23,13 +23,17 @@
   grid-row: 8/10;
   background-color: orange;
 }
+
+/* tab section */
 .tabNotSelected {
-  grid-column: 3/4;
-  grid-row: 1;
+  height: 25px;
+  padding-top: 5px;
+  margin-left: 15px;
   background-color: yellow;
 }
 .tabSelected {
-  grid-column: 3/4;
-  grid-row: 1;
+  height: 25px;
+  padding-top: 5px;
+  margin-left: 15px;
   background-color: black;
 }
