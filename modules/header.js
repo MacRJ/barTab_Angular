@@ -1,8 +1,7 @@
-// const header = angular.module('barTab', [
-//   'Factory'
-// ])
-//  tabsSection.controller('header', function($scope, tabs) {
-//    tabs.list(function(tabs) {
-//      $scope.tabs = tabs;
-//    })
-// })
+var header = angular.module('headerMod', [
+])
+
+header.controller("headerController", function($scope) {
+  $scope.hello = {};
+  $scope.hello.test = "hello World"
+});

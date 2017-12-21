@@ -1,8 +1,8 @@
-// const tabsSection = angular.module('barTab', [
-//   'Factory'
-// ])
-//  tabsSection.controller('tabSection', function($scope, tabs) {
-//    tabs.list(function(tabs) {
-//      $scope.tabs = tabs;
-//    })
-// })
+const tabSection = angular.module('tabSectionMod', [
+  'factory'
+])
+ tabSection.controller('tabSectionController', function($scope, tabs) {
+   tabs.list(function(tabs) {
+     $scope.tabs = tabs;
+   })
+})

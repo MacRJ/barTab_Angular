@@ -8,15 +8,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
     <script src="factory.js"></script>
+    <script src="modules/tabSection.js"></script>
+    <script src="modules/header.js"></script>
     <script src="app.js"></script>
-    <!-- <script src="modules/tabSection.js"></script>
-    <script src="modules/header.js"></script> -->
   </head>
   <body>
     <div ng-view></div>
-    <div class="container"> hello
-      <div ng-controller="header" class="header">{{hello.test}}</div>
-      <div ng-controller="tabSection" class="tabSection">
+    <div class="container">
+      <div ng-controller="headerController" class="header">{{hello.test}}
+      </div>
+      <div ng-controller="tabSectionController" class="tabSection">
         <div ng-repeat="tab in tabs"
              ng-class= "tab.selected ? 'tabSelected' : 'tabNotSelected'"
              ng-Click= "selectTab(tab.id)"
