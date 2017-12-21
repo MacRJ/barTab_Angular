@@ -1,4 +1,4 @@
-angular.module('mainFactory', [])
+angular.module('factory', [])
        .factory('tabs', function($http){
   return {
     list: function (callback){

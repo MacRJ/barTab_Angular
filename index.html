@@ -4,20 +4,26 @@
     <meta charset="utf-8">
     <title>barTab</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
-    <script src="controllers.js"></script>
-    <script src="mainFactory.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
+    <script src="factory.js"></script>
+    <script src="app.js"></script>
+    <!-- <script src="modules/tabSection.js"></script>
+    <script src="modules/header.js"></script> -->
   </head>
   <body>
     <div ng-view></div>
-    <div class="container">
+    <div class="container"> hello
       <div ng-controller="header" class="header">{{hello.test}}</div>
       <div ng-controller="tabSection" class="tabSection">
-        <div ng-repeat="tab in tabs" ng-class= "tab.selected ? 'tabSelected' : 'tabNotSelected'">{{tab.id}}</div>
+        <div ng-repeat="tab in tabs"
+             ng-class= "tab.selected ? 'tabSelected' : 'tabNotSelected'"
+             ng-Click= "selectTab(tab.id)"
+            >{{tab.id}}
+        </div>
       </div>
-      <div class="billSection"></div>
-      <div class="menuSection"></div>
     </div>
+    <div>test</div>
   </body>
 </html>
