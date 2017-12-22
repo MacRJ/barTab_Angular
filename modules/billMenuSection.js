@@ -51,5 +51,11 @@ billMenuSection.controller('selectorController', function($scope) {
     } else {
       null
     }
+  };
+})
+.directive('theBill', function() {
+    return {
+      restrict: 'A',
+      templateUrl: 'theBill.html'
   }
 })
