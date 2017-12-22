@@ -1,4 +1,5 @@
 angular.module("barTab", [
   'headerMod',
-  'tabSectionMod'
+  'tabSectionMod',
+  'billMenuMod'
 ])

@@ -10,6 +10,7 @@
     <script src="factory.js"></script>
     <script src="modules/tabSection.js"></script>
     <script src="modules/header.js"></script>
+    <script src="modules/billMenuSection.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
@@ -21,10 +22,18 @@
         <div ng-repeat="tab in tabs"
              ng-style= "displayTab(tab.selected)"
              ng-Click= "selectTab(tab.id)"
-            >{{tab.id}}
+            >{{tab.id}} </div>
         </div>
+        <div ng-controller="selectorController" class="billMenuSectionCss">
+          <div
+            ng-style="billSectionSelector()"
+            ng-Click="selectBill()"
+            >test</div>
+          <div ng-style="menuSectionSelector()"
+               ng-Click="selectMenu()"
+          >testy</div>
+      </div>
       </div>
     </div>
-    <div>test</div>
   </body>
 </html>
