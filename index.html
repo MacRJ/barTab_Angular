@@ -19,7 +19,7 @@
       </div>
       <div ng-controller="tabSectionController" class="tabSection">
         <div ng-repeat="tab in tabs"
-             ng-class= "tab.selected ? 'tabSelected' : 'tabNotSelected'"
+             ng-style= "displayTab(tab.selected)"
              ng-Click= "selectTab(tab.id)"
             >{{tab.id}}
         </div>
