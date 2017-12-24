@@ -1,0 +1,16 @@
+.bill_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 75px auto 75px
+}
+.bill_header {
+  grid-column: 1/4;
+  grid-row: 1/6;
+  border-bottom-style: solid;
+}
+.bill_server {
+  grid-column: 1/2;
+  grid-row: 3;
+  justify-self: start;
+  align-self: end;
+}

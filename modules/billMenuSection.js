@@ -54,8 +54,10 @@ billMenuSection.controller('selectorController', function($scope) {
   };
 })
 .directive('theBill', function() {
+  if(billSelected) {
     return {
       restrict: 'A',
-      templateUrl: 'theBill.html'
-  }
+      templateUrl: 'templates/theBill.html'
+    }
+  } else {null}
 })

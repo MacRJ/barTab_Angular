@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>barTab</title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="css/billCss.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
@@ -14,16 +15,18 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div ng-view></div>
     <div class="container">
+      <!--Header  -->
       <div ng-controller="headerController" class="header">{{hello.test}}
       </div>
+      <!--Tab Section  -->
       <div ng-controller="tabSectionController" class="tabSection">
-        <div ng-repeat="tab in tabs"
+        <div ng-repeat="tab in tabs | orderBy: 'id'"
              ng-style= "displayTab(tab.selected)"
              ng-Click= "selectTab(tab.id)"
             >{{tab.id}} </div>
         </div>
+      <!--Bill Section  -->
         <div ng-controller="selectorController" class="billMenuSectionCss">
           <div
             ng-style="billSectionSelector()"
@@ -31,6 +34,7 @@
             the-bill
             />
           </div>
+      <!--Menu Section  -->
           <div ng-style="menuSectionSelector()"
                ng-Click="selectMenu()"
           >testy
