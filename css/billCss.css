@@ -14,3 +14,15 @@
   justify-self: start;
   align-self: end;
 }
+.bill_description {
+  grid-column: 2/3;
+  grid-row: 3;
+  justify-self: start;
+  align-self: end
+}
+.bill_item {
+  grid-column: 3/4;
+  grid-row: 3;
+  justify-self: start;
+  align-self: end
+}

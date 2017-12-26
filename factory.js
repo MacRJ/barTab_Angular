@@ -6,7 +6,7 @@ angular.module('factory', [])
         method: 'GET',
         url: 'https://murmuring-tundra-40675.herokuapp.com/tabs',
         cache: true
-      }).success(callback);
-    },
+      }).success(callback)
+    }
   };
-});
+})

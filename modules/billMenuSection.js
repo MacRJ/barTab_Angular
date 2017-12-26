@@ -1,6 +1,4 @@
-const billMenuSection = angular.module('billMenuMod', [
-  'factory'
-])
+const billMenuSection = angular.module('billMenuMod', [])
 var billSelected = true;
 
 
@@ -9,12 +7,12 @@ billMenuSection.controller('selectorController', function($scope) {
     let billSelectedCss = {
       "grid-column": '1/3',
       "grid-row": '1/8',
-      "background-color": "lightgreen",
+      // "background-color": "black",
     };
     let billNotSelectedCss = {
       "grid-column": '1/3',
       "grid-row": '8/10',
-      "background-color": "lightgreen",
+      // "background-color": "black",
     }
 
     return billSelected ? billSelectedCss : billNotSelectedCss
@@ -54,10 +52,8 @@ billMenuSection.controller('selectorController', function($scope) {
   };
 })
 .directive('theBill', function() {
-  if(billSelected) {
-    return {
-      restrict: 'A',
-      templateUrl: 'templates/theBill.html'
-    }
-  } else {null}
+  return {
+    restrict: 'A',
+    templateUrl: 'templates/theBill.html'
+  }
 })
