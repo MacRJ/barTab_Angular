@@ -1,5 +1,5 @@
 const tabSection = angular.module('tabSectionMod', [
-  'factory'
+  'factoryMod'
 ])
  var count = 0;
  tabSection.controller('tabSectionController', function($scope, tabs) {

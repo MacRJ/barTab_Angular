@@ -1,9 +1,13 @@
 var bill = angular.module('billMod', [
-  'factory'
+  'factoryMod'
 ])
 
 bill.controller('bill_items', function($scope, bill){
   bill.list(function(bill) {
-    $scope.bill = bill
+    $scope.bill = bill;
   })
+
+  $scope.checkfulfilled = function() {
+    console.log('checkfulfilled heard')
+  }
 })

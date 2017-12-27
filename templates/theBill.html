@@ -12,8 +12,17 @@
   </div>
 
   <!--Body Section  -->
-  <!-- <div ng-controller="bill_items">
-    <div ng-repeat="item in bill"></div>
-  </div> -->
+  <div
+    ng-controller="bill_items"
+    ng-style="checkfulfilled()"
+    class="bill_body_container"
+    >
+    <div
+      ng-repeat="item in bill | orderBy: 'id'"
+
+    >
+    </div>
+
+  </div>
 
 </div>
