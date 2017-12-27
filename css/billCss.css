@@ -1,11 +1,11 @@
 .bill_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 75px auto 75px
+  grid-template-rows: 75px auto 75px 100px
 }
 .bill_header {
   grid-column: 1/4;
-  grid-row: 1/6;
+  grid-row: 1/4;
   border-bottom-style: solid;
 }
 .bill_server {
@@ -27,5 +27,7 @@
   align-self: end
 }
 .bill_body_container {
-  
+  margin-top: 2px;
+  grid-row: 4;
+  background-color: green
 }
