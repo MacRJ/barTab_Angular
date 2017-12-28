@@ -1,10 +1,10 @@
 .bill_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 75px auto 75px 100px
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 75px auto 75px 400px 100px
 }
 .bill_header {
-  grid-column: 1/4;
+  grid-column: 1/5;
   grid-row: 1/4;
   border-bottom-style: solid;
 }
@@ -20,14 +20,30 @@
   justify-self: start;
   align-self: end
 }
-.bill_item {
+.bill_quantity {
   grid-column: 3/4;
   grid-row: 3;
   justify-self: start;
   align-self: end
 }
-.bill_body_container {
+.bill_price {
+  grid-column: 4/5;
+  grid-row: 3;
+  justify-self: start;
+  align-self: end
+}
+.bill_body_description {
   margin-top: 2px;
+  grid-column: 2/3;
   grid-row: 4;
-  background-color: green
+}
+.bill_body_price {
+  grid-column: 4/5;
+  grid-row: 4;
+  margin-top: 2px
+}
+.bill_totalSection {
+  grid-column: 1/5;
+  grid-row: 5;
+  border-top-style: solid;
 }

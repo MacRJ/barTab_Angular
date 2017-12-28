@@ -7,7 +7,17 @@ bill.controller('bill_items', function($scope, bill){
     $scope.bill = bill;
   })
 
-  $scope.checkfulfilled = function() {
-    console.log('checkfulfilled heard')
+  $scope.bill_body_description = function(fulfilled) {
+    let fulfilledVar = {
+      "height": "20px",
+      "padding-top" : "5px"
+    };
+    let notFulfilledVar = {
+      "background-color": "red",
+      "height": "20px"
+    }
+    return fulfilled ? fulfilledVar : notFulfilledVar
   }
+
+
 })
