@@ -19,5 +19,8 @@ bill.controller('bill_items', function($scope, bill){
     return fulfilled ? fulfilledVar : notFulfilledVar
   }
 
+  $scope.findTotal = function() {
+    return 'hello'
+  }
 
 })

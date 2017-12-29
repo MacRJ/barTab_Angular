@@ -19,7 +19,6 @@
     ng-controller="bill_items"
     class="bill_body_description"
     >
-
       <div
         ng-repeat="item in bill | orderBy: 'id'"
         ng-style="bill_body_description(item.fulfilled)"
@@ -38,8 +37,19 @@
   </div>
 
 <!--Bill Total Section  -->
-  <div class="bill_totalSection">
+  <div
+    class="bill_totalSection">
   </div>
-  </div>
-
-</div>
+  <div
+    class="bill_total"
+    ng-controller="bill_items"
+    >
+    <div class="findTotal">
+      total {{findTotal()}}
+      <br />
+      tax 5.5%
+      <br />
+      grand total {{findGrandTotal()}}
+      <br />
+    </div>
+ </div>
