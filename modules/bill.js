@@ -2,6 +2,7 @@ var bill = angular.module('billMod', [
   'factoryMod'
 ])
 
+
 bill.controller('bill_items', function($scope, bill){
   bill.list(function(bill) {
     $scope.bill = bill;
@@ -18,9 +19,4 @@ bill.controller('bill_items', function($scope, bill){
     }
     return fulfilled ? fulfilledVar : notFulfilledVar
   }
-
-  $scope.findTotal = function() {
-    return 'hello'
-  }
-
 })

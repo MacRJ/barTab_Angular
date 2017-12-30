@@ -42,14 +42,14 @@
   </div>
   <div
     class="bill_total"
-    ng-controller="bill_items"
+    ng-controller="calculatorController"
     >
     <div class="findTotal">
-      total {{findTotal()}}
+      total $ {{findTotal()}}
       <br />
-      tax 5.5%
+      tax 5.5% $ {{findTax()}}
       <br />
-      grand total {{findGrandTotal()}}
+      grand total $ {{findGrandTotal()}}
       <br />
     </div>
  </div>
