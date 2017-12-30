@@ -30,3 +30,13 @@
   grid-row: 8/10;
   background-color: lightyellow;
 }
+.addNewTabButton {
+  grid-column: 3/4;
+  grid-row: 9;
+  background-color: green;
+  height: 50px;
+  width: 150px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}

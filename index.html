@@ -26,8 +26,17 @@
         <div ng-repeat="tab in tabs | orderBy: 'id'"
              ng-style= "displayTab(tab.selected)"
              ng-Click= "selectTab(tab.id)"
-            >{{tab.id}} </div>
-        </div>
+            >{{tab.id}}
+    </div>
+    </div>
+    <!-- Button To Add New Tab -->
+      <div
+        ng-controller="tabSectionController"
+        class="addNewTabButton"
+        ng-Click= "addNewTab()"
+        > Add New Tab
+      <!-- </div> -->
+    </div>
       <!--Bill Section  -->
         <div ng-controller="selectorController" class="billMenuSectionCss">
           <div

@@ -2,21 +2,19 @@ const tabSection = angular.module('tabSectionMod', [
   'factoryMod'
 ])
  var count = 0;
- tabSection.controller('tabSectionController', function($scope, tabs) {
+ tabSection.controller('tabSectionController', function($scope, tabs, $http) {
    tabs.list(function(tabs) {
      $scope.tabs = tabs;
    })
 
    $scope.displayTab = function(selected){
-
      var colors = ['#33a1fd','#52dbaf','#fdca40','#f79824','#33a1fd','#52dbaf','#fdca40','#f79824','#33a1fd','#52dbaf','#fdca40','#f79824','#2176ff','#32ffd2'];
 
-
      if(count === 14){
-       count = 0
-     } else {
-       count++
-     }
+         count = 0
+       } else {
+         count++
+       };
 
      let notSelectedCss = {
        "height": "40px",
@@ -25,7 +23,7 @@ const tabSection = angular.module('tabSectionMod', [
        "margin-top": "5px",
        "background-color": colors[count]
 
-     };
+      };
      let selectedCss = {
        "height": "40px",
        "padding-top": "5px",
@@ -35,5 +33,18 @@ const tabSection = angular.module('tabSectionMod', [
 
      };
     return selected ? selectedCss : notSelectedCss
+  };
+
+// Add New Tab Function
+
+  $scope.addNewTab = function() {
+    $scope.apply();
+      $http.post('https://murmuring-tundra-40675.herokuapp.com/tabs/add');
+  };
+
+  $scope.selectTab =  function() {
+    console.log('hello')
   }
+
+
 })
