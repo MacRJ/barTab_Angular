@@ -1,8 +1,9 @@
 const billMenuSection = angular.module('billMenuMod', [])
-var billSelected = true;
+var billSelected = false;
 
 
 billMenuSection.controller('selectorController', function($scope) {
+  $scope.billSelected = billSelected;
   $scope.billSectionSelector = function() {
     let billSelectedCss = {
       "grid-column": '1/3',
@@ -22,7 +23,7 @@ billMenuSection.controller('selectorController', function($scope) {
     if(billSelected) {
       null
     } else {
-      billSelected = !billSelected
+      billSelected = !billSelected;
     }
   };
 

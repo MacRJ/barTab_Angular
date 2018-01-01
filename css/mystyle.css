@@ -40,3 +40,7 @@
   justify-self: center;
   text-align: center;
 }
+.clickMe {
+  align-self: center;
+  justify-content: center;
+}

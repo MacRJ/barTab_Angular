@@ -38,7 +38,6 @@ const tabSection = angular.module('tabSectionMod', [
 // Add New Tab Function
 
   $scope.addNewTab = function() {
-    $scope.apply();
       $http.post('https://murmuring-tundra-40675.herokuapp.com/tabs/add');
   };
 
